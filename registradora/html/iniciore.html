@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url("../images/messi.jpeg");
+        }
+        h3{
+            color: antiquewhite;
+        }
+    </style>
+    <title>HOME MASCULINO</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6-offset-md-3">
+                <h3>Hola <span id="spam_nombre"></span></h3>
+                <button class="btn btn-danger w-100" onclick="logout()">logout</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        let  sonido = new Audio("../sonidos/messi.mp3");
+        sonido.play();
+        let nombre = sessionStorage.getItem('nombre');
+        document.getElementById('spam_nombre').innerText = nombre;
+        function logout(){
+            location.href=("./registradora.html");
+        }
+    </script>
+</body>
+</html>
